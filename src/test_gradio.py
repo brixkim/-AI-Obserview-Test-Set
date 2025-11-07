@@ -16,6 +16,6 @@ with gr.Blocks() as demo:
         with gr.Group(elem_classes=["my-group"]):
             cam = gr.Image(sources=["webcam"], type="numpy", label="YOLO Test")
             
-        cam.stream(fn=detect, inputs=cam, outputs=cam, stream_every = 0.1)
+        cam.stream(fn=detect, inputs=cam, outputs=cam, stream_every = 0.05)
 
 demo.launch(share=True)
